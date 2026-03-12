@@ -3,7 +3,7 @@ import time
 from google import genai
 
 # Tu clave API
-MI_API_KEY = "AIzaSyCFHLnb6Rb8ji8adLX9Bj0FRsVs_EiY6W8"
+MI_API_KEY = "INSERT_API_KEY_HERE"
 client = genai.Client(api_key=MI_API_KEY)
 
 class ChatManager:
