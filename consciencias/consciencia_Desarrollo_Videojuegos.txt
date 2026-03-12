@@ -1,0 +1,14 @@
+--- CONSCIENCIA GRUPAL: DESARROLLO_VIDEOJUEGOS ---
+
+--- INICIO CONTENIDO CHAT 001 ---
+Chat de Juegos: Mecánicas de salto y físicas.
+--- FIN CONTENIDO CHAT 001 ---
+
+--- INICIO CONTENIDO CHAT 003 ---
+Chat de Juegos: Curiosidades de Mirror's Edge.
+--- FIN CONTENIDO CHAT 003 ---
+
+--- INICIO CONTENIDO CHAT 005 ---
+Chat de Programación: Scripts en Java y C#.
+--- FIN CONTENIDO CHAT 005 ---
+
