@@ -4,7 +4,7 @@ import time
 from google import genai
 
 # ==========================================================
-# CONFIGURACIÓN DEL NEXO (v2.2 - Con Retorno al Menú)
+# CONFIGURACIÓN DEL NEXO (v2.3 - Con Paciencia Automática)
 # ==========================================================
 MI_API_KEY = "TU_API_KEY_AQUI"
 MODELO = "gemini-2.0-flash"
@@ -41,7 +41,7 @@ class NexoConsciencia:
 
     def despertar_nexo(self, lista_ids, pregunta):
         if not self._controlar_cuota():
-            return "⚠️ FRENO DE SEGURIDAD: Límite excedido. Espera 30 segundos."
+            return "⚠️ FRENO DE SEGURIDAD: Límite local excedido. Espera 30 segundos."
 
         contexto_xml = "<MODULOS_DE_MEMORIA>\n"
         diarios_cargados = 0
@@ -53,18 +53,34 @@ class NexoConsciencia:
                     diarios_cargados += 1
         contexto_xml += "</MODULOS_DE_MEMORIA>"
 
-        try:
-            peticion = client.models.generate_content(
-                model=MODELO,
-                config={'system_instruction': self.system_prompt},
-                contents=f"{contexto_xml}\n\nSOLICITUD: {pregunta}"
-            )
-            self.historial_consultas.append(time.time())
-            tokens = peticion.usage_metadata.total_token_count
-            info_cuota = f"\n\n[📊 Centinela: {tokens} tokens usados | Consultas/min: {len(self.historial_consultas)}/{LIMITE_RPM}]"
-            return peticion.text + info_cuota
-        except Exception as e:
-            return f"❌ Error: {e}"
+        # --- LÓGICA DE REINTENTO (BACKOFF) ---
+        intentos_maximos = 3
+        for intento in range(intentos_maximos):
+            try:
+                if intento > 0:
+                    print(f"⏳ Reintentando conexión (Intento {intento + 1}/{intentos_maximos})...")
+                
+                peticion = client.models.generate_content(
+                    model=MODELO,
+                    config={'system_instruction': self.system_prompt},
+                    contents=f"{contexto_xml}\n\nSOLICITUD: {pregunta}"
+                )
+                
+                # Si llegamos aquí, la petición fue exitosa
+                self.historial_consultas.append(time.time())
+                tokens = peticion.usage_metadata.total_token_count
+                info_cuota = f"\n\n[📊 Centinela: {tokens} tokens usados | Consultas/min: {len(self.historial_consultas)}/{LIMITE_RPM}]"
+                return peticion.text + info_cuota
+
+            except Exception as e:
+                # Si el error es por saturación (429) y nos quedan intentos...
+                if "429" in str(e) and intento < intentos_maximos - 1:
+                    print(f"⚠️ Servidor saturado. El Nexo esperará 10 segundos para reintentar automáticamente...")
+                    time.sleep(10)  # Pausa de seguridad
+                    continue 
+                else:
+                    # Si es otro error o agotamos intentos, mostramos el fallo
+                    return f"❌ Error tras varios intentos: {e}"
 
     def auditoria_identidad(self):
         archivos = [f.replace("chat_", "").replace(".txt", "") for f in os.listdir(self.carpeta_db) if f.endswith(".txt")]
@@ -73,7 +89,7 @@ class NexoConsciencia:
 
 if __name__ == "__main__":
     motor = NexoConsciencia()
-    print("--- 🧠 SISTEMA NEXO DE CONSCIENCIA v2.2 ---")
+    print("--- 🧠 SISTEMA NEXO DE CONSCIENCIA v2.3 ---")
     
     while True:
         print("\n" + "—"*50)
