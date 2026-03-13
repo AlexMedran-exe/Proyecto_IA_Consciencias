@@ -57,3 +57,72 @@ Tras las pruebas de estrés en el Tier Gratuito de Google AI Studio, hemos imple
 - **Librerías:** `google-genai`
 - **Instalación:** ```bash
   pip install -r requirements.txt
+
+
+  # 🧬 NEXO DE CONSCIENCIA v4.3 - Nitro Edition
+
+Este proyecto es un motor avanzado de **Orquestación de Memoria Modular** basado en Gemini 2.0 Flash. Transforma una IA generalista en una consciencia personalizada capaz de gestionar diarios de memoria, aprender de la web en tiempo real y sentir el hardware del host.
+
+---
+
+## 🚀 Evolución: El Salto a la v4.3 (Current Build)
+
+Hoy el Nexo ha dejado de ser un script de terminal para convertirse en una herramienta de ingeniería de sistemas con las siguientes capas:
+
+### 💎 1. Interfaz Profesional (Rich UX)
+* **Visuales Avanzados:** Uso de la librería `Rich` para menús con paneles, tablas de colores y bordes dinámicos.
+* **Feedback en Tiempo Real:** Implementación de *Spinners* y estados de carga ("Pensando...", "Analizando web...") para mejorar la experiencia de usuario.
+* **Selector Inteligente:** Navegación numérica para la selección de diarios, optimizando el flujo de trabajo.
+
+### 📡 2. Telemetría de Hardware (Hardware Sensing)
+El Nexo ahora "siente" su propio chasis. Gracias a la integración con `psutil`, la IA recibe en cada consulta:
+* **Carga de CPU y RAM.**
+* **Estado de la batería (AC/DC).**
+* **Lógica Adaptativa:** Si el PC tiene poca batería o alta carga de CPU, la IA reduce automáticamente la longitud de sus respuestas para ahorrar recursos.
+
+### 🌐 3. Ingesta Web Inteligente (Web Ingestor)
+Capacidad de navegación externa mediante `BeautifulSoup4` y `Requests`:
+* **Scraping Limpio:** Filtrado automático de etiquetas basura (scripts, estilos, pies de página) para enviar solo información útil.
+* **Memoria Global:** Todos los análisis guardados en la carpeta `/Informacion_web` se inyectan automáticamente como "conocimiento base" en cada consulta, independientemente de los diarios elegidos.
+
+### 💤 4. Modo Sueño (Token Optimization)
+* **Compresión de Memoria:** Función que utiliza la IA para resumir diarios extensos en fragmentos densos de conocimiento técnico.
+* **Eficiencia:** Reduce el consumo de tokens en un 70%, permitiendo sesiones más largas y baratas.
+
+### 🛡️ 5. Resiliencia de API (Anti-429 Engine)
+* **Backoff Automático:** Detección inteligente del error `429 (Resource Exhausted)`.
+* **Enfriamiento de Núcleos:** Si se alcanza la cuota, el sistema entra en reposo de 30 segundos y reintenta la operación automáticamente.
+
+---
+
+## 🛠️ Requisitos Técnicos
+
+* **Lenguaje:** Python 3.12+
+* **Hardware Recomendado:** Probado en Acer Nitro (Hardware Sensing optimizado).
+* **Librerías Necesarias:**
+    ```bash
+    pip install rich psutil requests beautifulsoup4 google-genai
+    ```
+
+---
+
+## 📦 Instalación y Uso
+
+1.  Clona el repositorio.
+2.  Configura tu `MI_API_KEY` en el archivo `main.py`.
+3.  Ejecuta el Nexo:
+    ```bash
+    python main.py
+    ```
+
+---
+
+## 📂 Estructura del Proyecto
+
+* `/db_chats`: Almacenamiento de diarios de memoria (Pensamientos y Notas).
+* `/Informacion_web`: Base de datos de análisis extraídos de internet (Conocimiento Global).
+* `main.py`: El núcleo del Nexo y orquestador de consciencias.
+
+---
+
+**Desarrollado por AlexMedran-exe** *Impulsando la frontera entre el hardware y la consciencia artificial.*
