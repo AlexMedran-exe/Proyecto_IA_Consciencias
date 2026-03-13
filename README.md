@@ -37,3 +37,23 @@ Sistema de orquestación de memoria modular basado en Gemini 2.0 Flash. Este pro
 1. Configura tu API Key en `main.py`.
 2. Lanza el nexo: `python main.py`
 3. Usa la **Auditoría Global** para ver cómo la IA unifica tus fragmentos de memoria.
+
+# 🧠 Nexo de Consciencia v2.3 — Arquitectura RAG Resiliente
+
+Este proyecto es un motor de **Orquestación de Memoria Modular** basado en Gemini 2.0 Flash. Permite a una IA gestionar fragmentos de identidad del usuario a través de archivos XML locales, creando una "consciencia" persistente que no olvida entre sesiones.
+
+## 🚀 Novedades de la Versión 2.3 (Resilience Update)
+
+Tras las pruebas de estrés en el Tier Gratuito de Google AI Studio, hemos implementado mejoras críticas de ingeniería:
+
+- **🛡️ Sistema de Resiliencia (Automatic Backoff):** El Nexo ahora es capaz de detectar el error `429 (Too Many Requests)` y gestionar reintentos automáticos con pausas estratégicas. El código no se detiene; espera a que el servidor respire y continúa.
+- **🧭 Navegación UX Mejorada:** Implementada la función de retroceso al menú principal mediante el comando `'q'` en cualquier entrada de datos, evitando cierres accidentales.
+- **📊 Centinela de Cuota v2:** Monitorización en tiempo real de RPM (Peticiones por Minuto) para maximizar el uso de la API sin llegar al bloqueo.
+- **🏗️ Estructura XML 2.0:** Inyección jerárquica de contextos para asegurar que la IA priorice los diarios del usuario sobre su conocimiento general (Anti-Alucinaciones).
+
+## 🛠️ Requisitos Técnicos
+
+- **Lenguaje:** Python 3.12+ (Probado en 3.14)
+- **Librerías:** `google-genai`
+- **Instalación:** ```bash
+  pip install -r requirements.txt
