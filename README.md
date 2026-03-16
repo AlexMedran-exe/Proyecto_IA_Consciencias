@@ -1,6 +1,7 @@
 # 🧠 Gestor de Consciencias Modulares (AI-Orchestrator)
 
 Este proyecto es un prototipo avanzado de gestión de memoria para Inteligencia Artificial. A diferencia de un chat convencional, este sistema permite segmentar la información en **"Diarios de Memoria"** independientes que pueden ser fusionados dinámicamente para crear una **Consciencia Unificada**.
+(HECHO POR Y PARA LA IA)
 
 ## 🚀 Concepto Principal
 El software separa el **Almacenamiento** del **Procesamiento**:
