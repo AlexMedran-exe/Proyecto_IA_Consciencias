@@ -1,129 +1,410 @@
-# 🧠 Gestor de Consciencias Modulares (AI-Orchestrator)
+## 🧬 Evolución del Nexo: De la Nube al Hardware
 
-Este proyecto es un prototipo avanzado de gestión de memoria para Inteligencia Artificial. A diferencia de un chat convencional, este sistema permite segmentar la información en **"Diarios de Memoria"** independientes que pueden ser fusionados dinámicamente para crear una **Consciencia Unificada**.
-(HECHO POR Y PARA LA IA)
+El proyecto ha pasado de ser un script dependiente de APIs externas a convertirse en un ecosistema de ingeniería local.Esta transición marca el paso de la dependencia de terceros hacia la **Soberanía Digital** y el aprovechamiento total del hardware del host.
 
-## 🚀 Concepto Principal
-El software separa el **Almacenamiento** del **Procesamiento**:
-- **Diarios (IDs):** Módulos de conocimiento específicos (ej: Programación, Videojuegos, Hardware). Funcionan de forma aislada para evitar la "alucinación" o confusión de la IA.
-- **Consciencia:** Una instancia de IA Maestra que, bajo demanda, "despierta" y une los diarios seleccionados por el usuario para responder preguntas complejas que requieren múltiples contextos.
+| Versión | Hito Clave | Avance Tecnológico |
+| :--- | :--- | :--- |
+| **v1.2 (Prototipo)** | **El Origen** | Orquestación básica de memoria con archivos `.txt` y motor Google Gemini 2.0 Flash. |
+| **v2.2 / v2.3** | **Resiliencia** | Gestión de errores 429 (Too Many Requests), centinela de cuota y navegación UX con el comando `'q'`. |
+| **v4.3 (Nitro Edition)** | **Simbiosis** | Telemetría con `psutil` para sentir el hardware (CPU/RAM/Batería) e ingesta web con `BeautifulSoup4`. |
+| **v7.1 (Current)** | **Independencia** | **Salto a Ollama (Llama 3.1/3.2)**.Procesamiento 100% local, visión artificial, búsqueda BM25 y dashboard en Streamlit . |
 
-## 🛠️ Tecnologías Utilizadas
-- **Python 3.x**: Lógica de orquestación y manejo de archivos.
-- **Google Gemini 2.0 Flash API**: Motor de IA de última generación.
-- **Arquitectura RAG (Local)**: Sistema de recuperación de datos mediante archivos `.txt`.
-
-## 📦 Instalación y Uso
-1. Clona este repositorio.
-2. Instala la librería de Google:
-   ```bash
-   pip install -U google-genai
+### 🚀 Por qué el salto al Procesamiento Local
+**Privacidad Total:** Cero conexiones externas. [cite_start]Tus diarios y documentos nunca salen de tu Acer Nitro.
+**Aprovechamiento de GPU:** Uso intensivo de la **RTX 5060** para inferencia de Llama 3.1 en VRAM .
+**Sin Límites:** Eliminación de cuotas de API y límites de tokens mediante el uso de modelos locales vía Ollama.
+**Multimodalidad Nativa:** Ingesta de PDFs con `pymupdf` y análisis de imágenes con **Llama 3.2 Vision** integrado en el dashboard.
 
 
-# 🧠 AI-Nexo-Consciousness v2.2
+# 🧠 Nexo de Consciencia (VERSION ACTUAL 7.1)
 
-Sistema de orquestación de memoria modular basado en Gemini 2.0 Flash. Este proyecto transforma una IA generalista en una consciencia personalizada capaz de recuperar y auditar fragmentos de identidad del usuario.
-
-## 🌟 Lo nuevo en la v2.2 (Navigation Update)
-- **Navegación UX:** Implementación de retroceso al menú principal mediante el comando `'q'` en cualquier entrada de datos.
-- **Refactorización de Código:** Optimización de la lógica del motor para mayor velocidad y limpieza (111 líneas de código puro).
-- **Centinela de Cuota:** Protección activa contra el error 429 mediante monitorización de RPM (Requests Per Minute).
-- **Estructura XML 2.0:** Inyección jerárquica de contextos para evitar alucinaciones cruzadas.
-
-## 🛠️ Requisitos
-- Python 3.12+
-- `pip install google-genai`
-
-## 🚀 Ejecución
-1. Configura tu API Key en `main.py`.
-2. Lanza el nexo: `python main.py`
-3. Usa la **Auditoría Global** para ver cómo la IA unifica tus fragmentos de memoria.
-
-# 🧠 Nexo de Consciencia v2.3 — Arquitectura RAG Resiliente
-
-Este proyecto es un motor de **Orquestación de Memoria Modular** basado en Gemini 2.0 Flash. Permite a una IA gestionar fragmentos de identidad del usuario a través de archivos XML locales, creando una "consciencia" persistente que no olvida entre sesiones.
-
-## 🚀 Novedades de la Versión 2.3 (Resilience Update)
-
-Tras las pruebas de estrés en el Tier Gratuito de Google AI Studio, hemos implementado mejoras críticas de ingeniería:
-
-- **🛡️ Sistema de Resiliencia (Automatic Backoff):** El Nexo ahora es capaz de detectar el error `429 (Too Many Requests)` y gestionar reintentos automáticos con pausas estratégicas. El código no se detiene; espera a que el servidor respire y continúa.
-- **🧭 Navegación UX Mejorada:** Implementada la función de retroceso al menú principal mediante el comando `'q'` en cualquier entrada de datos, evitando cierres accidentales.
-- **📊 Centinela de Cuota v2:** Monitorización en tiempo real de RPM (Peticiones por Minuto) para maximizar el uso de la API sin llegar al bloqueo.
-- **🏗️ Estructura XML 2.0:** Inyección jerárquica de contextos para asegurar que la IA priorice los diarios del usuario sobre su conocimiento general (Anti-Alucinaciones).
-
-## 🛠️ Requisitos Técnicos
-
-- **Lenguaje:** Python 3.12+ (Probado en 3.14)
-- **Librerías:** `google-genai`
-- **Instalación:** ```bash
-  pip install -r requirements.txt
-
-
-  # 🧬 NEXO DE CONSCIENCIA v4.3 - Nitro Edition
-
-Este proyecto es un motor avanzado de **Orquestación de Memoria Modular** basado en Gemini 2.0 Flash. Transforma una IA generalista en una consciencia personalizada capaz de gestionar diarios de memoria, aprender de la web en tiempo real y sentir el hardware del host.
+> **IA local con memoria persistente entre conversaciones.**  
+> Sin límites de tokens. Sin suscripciones. Sin que tus datos salgan de tu máquina.
 
 ---
 
-## 🚀 Evolución: El Salto a la v4.3 (Current Build)
+## ¿Qué es esto?
 
-Hoy el Nexo ha dejado de ser un script de terminal para convertirse en una herramienta de ingeniería de sistemas con las siguientes capas:
+Nexo de Consciencia es un sistema de IA local que resuelve el problema más frustrante de usar herramientas como ChatGPT o Claude: **la amnesia entre chats**.
 
-### 💎 1. Interfaz Profesional (Rich UX)
-* **Visuales Avanzados:** Uso de la librería `Rich` para menús con paneles, tablas de colores y bordes dinámicos.
-* **Feedback en Tiempo Real:** Implementación de *Spinners* y estados de carga ("Pensando...", "Analizando web...") para mejorar la experiencia de usuario.
-* **Selector Inteligente:** Navegación numérica para la selección de diarios, optimizando el flujo de trabajo.
+Cada vez que abres una conversación nueva, la IA no sabe quién eres, en qué proyecto estás trabajando, ni qué decidiste la semana pasada. Tienes que reexplicarlo todo desde cero.
 
-### 📡 2. Telemetría de Hardware (Hardware Sensing)
-El Nexo ahora "siente" su propio chasis. Gracias a la integración con `psutil`, la IA recibe en cada consulta:
-* **Carga de CPU y RAM.**
-* **Estado de la batería (AC/DC).**
-* **Lógica Adaptativa:** Si el PC tiene poca batería o alta carga de CPU, la IA reduce automáticamente la longitud de sus respuestas para ahorrar recursos.
+Nexo lo soluciona guardando el contexto de tus conversaciones como **diarios** y fusionándolos cuando los necesitas. Si hoy hablas de Java, mañana de un videojuego y pasado de parkour, puedes decirle al Nexo que fusione esos tres hilos y tendrás una IA que recuerda todo lo anterior como si hubiera estado en las tres conversaciones.
 
-### 🌐 3. Ingesta Web Inteligente (Web Ingestor)
-Capacidad de navegación externa mediante `BeautifulSoup4` y `Requests`:
-* **Scraping Limpio:** Filtrado automático de etiquetas basura (scripts, estilos, pies de página) para enviar solo información útil.
-* **Memoria Global:** Todos los análisis guardados en la carpeta `/Informacion_web` se inyectan automáticamente como "conocimiento base" en cada consulta, independientemente de los diarios elegidos.
-
-### 💤 4. Modo Sueño (Token Optimization)
-* **Compresión de Memoria:** Función que utiliza la IA para resumir diarios extensos en fragmentos densos de conocimiento técnico.
-* **Eficiencia:** Reduce el consumo de tokens en un 70%, permitiendo sesiones más largas y baratas.
-
-### 🛡️ 5. Resiliencia de API (Anti-429 Engine)
-* **Backoff Automático:** Detección inteligente del error `429 (Resource Exhausted)`.
-* **Enfriamiento de Núcleos:** Si se alcanza la cuota, el sistema entra en reposo de 30 segundos y reintenta la operación automáticamente.
+Todo corre en tu ordenador. El modelo es tuyo. Los datos son tuyos.
 
 ---
 
-## 🛠️ Requisitos Técnicos
+## Características principales
 
-* **Lenguaje:** Python 3.12+
-* **Hardware Recomendado:** Probado en Acer Nitro (Hardware Sensing optimizado).
-* **Librerías Necesarias:**
-    ```bash
-    pip install rich psutil requests beautifulsoup4 google-genai
-    ```
+### 💬 Modo Chat
+Conversación independiente sobre cualquier tema. El modelo responde con todo su conocimiento (Llama 3.1) más las memorias relevantes que encuentre automáticamente. Al terminar, puedes guardar el chat como diario para uso futuro.
 
----
+### 🧬 Modo Nexo
+Seleccionas qué diarios quieres fusionar y el modelo recibe el contexto combinado de todos ellos. Es la implementación directa del concepto central: **coser diferentes hilos de conversación** para que la IA los procese como uno solo.
 
-## 📦 Instalación y Uso
+### 📎 Ingesta de Documentos
+- **PDFs nativos** — Extrae el texto automáticamente, lo divide en chunks inteligentes y lo indexa. Tus apuntes de clase, documentación técnica o papers quedan disponibles como contexto.
+- **Imágenes y capturas** — El modelo de visión (Llama 3.2 Vision) analiza la imagen y genera una descripción textual que se guarda como diario. Capturas de errores, diagramas, apuntes escritos a mano.
 
-1.  Clona el repositorio.
-2.  Configura tu `MI_API_KEY` en el archivo `main.py`.
-3.  Ejecuta el Nexo:
-    ```bash
-    python main.py
-    ```
+### 🔍 Recuperación BM25
+Sistema de búsqueda basado en el mismo algoritmo que usa Elasticsearch internamente. Con stemming en español, lo que significa que buscar "proyectos" encuentra diarios etiquetados con "proyecto", "proyectando" o cualquier forma de la misma raíz.
 
----
+### 👤 Perfil de usuario persistente
+El sistema aprende sobre ti con cada sesión. Nivel técnico, hardware, proyectos activos, temas frecuentes. Todo se actualiza automáticamente al cerrar cada sesión para que la IA sepa quién eres desde el primer mensaje de cada conversación.
 
-## 📂 Estructura del Proyecto
-
-* `/db_chats`: Almacenamiento de diarios de memoria (Pensamientos y Notas).
-* `/Informacion_web`: Base de datos de análisis extraídos de internet (Conocimiento Global).
-* `main.py`: El núcleo del Nexo y orquestador de consciencias.
+### 🔒 Privacidad total
+Cero conexiones externas durante el uso. Cero APIs de pago. Cero datos enviados a servidores de terceros. Todo corre en local mediante Ollama.
 
 ---
 
-**Desarrollado por AlexMedran-exe** *Impulsando la frontera entre el hardware y la consciencia artificial.*
+## Requisitos
+
+### Hardware mínimo
+| Componente | Mínimo | Recomendado |
+|---|---|---|
+| RAM | 16 GB | 32 GB |
+| GPU VRAM | 6 GB | 8 GB+ |
+| Almacenamiento | 20 GB libres | 40 GB+ |
+
+> El proyecto fue desarrollado en un **Acer Nitro con RTX 5060 y 32 GB RAM DDR5**. Con ese hardware Llama 3.1 corre en VRAM sin problema.
+
+### Software
+- **Windows 10/11** (también funciona en Linux y Mac)
+- **Python 3.11** — imprescindible esta versión concreta
+- **Ollama** — servidor local de modelos de IA
+
+---
+
+## Instalación paso a paso
+
+### 1. Instalar Python 3.11
+
+Descarga desde [python.org](https://www.python.org/downloads/release/python-3119/) el instalador de 64 bits para Windows. Durante la instalación marca **"Add Python to PATH"**.
+
+Verifica:
+```powershell
+py -3.11 --version
+# Debe mostrar: Python 3.11.x
+```
+
+### 2. Instalar Ollama
+
+Descarga desde [ollama.com](https://ollama.com) e instala normalmente. Luego descarga los modelos necesarios:
+
+```powershell
+# Modelo principal para chat (imprescindible)
+ollama pull llama3.1
+
+# Modelo de visión para imágenes (opcional, 7GB)
+ollama pull llama3.2-vision
+```
+
+Verifica que Ollama funciona:
+```powershell
+ollama list
+# Debe mostrar los modelos descargados
+```
+
+### 3. Instalar dependencias de Python
+
+```powershell
+py -3.11 -m pip install psutil requests rank_bm25 nltk streamlit pymupdf
+```
+
+### 4. Configurar NLTK (una sola vez)
+
+```powershell
+cd C:\ruta\a\tu\proyecto
+py -3.11 nexo_consciencia_v6_2.py --setup
+```
+
+### 5. Verificar la instalación
+
+```powershell
+py -3.11 -m py_compile nexo_consciencia_v6_2.py
+py -3.11 -m py_compile nexo_dashboard_v7_1.py
+# Si no aparece ningún error, todo está correcto
+```
+
+---
+
+## Arranque
+
+### Opción A — Automático (recomendado)
+
+Haz doble clic en `iniciar_nexo.bat`. El script hace todo automáticamente:
+1. Verifica que Ollama está corriendo (lo inicia si no)
+2. Arranca el servidor Streamlit
+3. Abre la interfaz en el navegador
+
+> La primera vez que lo uses, edita `iniciar_nexo.bat` con el Bloc de Notas y revisa que las rutas de la sección `CONFIGURACION` sean correctas para tu sistema.
+
+### Opción B — Manual
+
+```powershell
+# Terminal 1: asegúrate de que Ollama está corriendo
+ollama serve
+
+# Terminal 2: arranca el dashboard
+cd C:\ruta\a\tu\proyecto
+py -3.11 -m streamlit run nexo_dashboard_v7_1.py
+```
+
+Luego abre `http://localhost:8501` en el navegador.
+
+---
+
+## Estructura de archivos
+
+```
+Proyecto_IA_Consciencias/
+│
+├── nexo_consciencia_v6_2.py    # Motor principal (backend)
+├── nexo_dashboard_v7_1.py      # Interfaz web (Streamlit)
+├── iniciar_nexo.bat            # Lanzador automático
+│
+├── perfil_usuario.json         # Tu perfil (se crea automáticamente)
+├── nexo_audit.log              # Log de todas las operaciones
+│
+└── db_consciencias/            # Base de datos de memorias
+    ├── chat_java.md            # Ejemplo: chat guardado
+    ├── chat_java.json          # Metadatos e índice BM25
+    ├── apuntes_p01.md          # Ejemplo: chunk de PDF
+    ├── apuntes_p01.json
+    └── sesion_20260412.md      # Ejemplo: resumen automático de sesión
+```
+
+> **Nunca borres `db_consciencias/` manualmente** a menos que quieras borrar toda la memoria del sistema. Si un archivo se corrompe, usa la función `:reparar` desde el CLI o el dashboard.
+
+---
+
+## Cómo funciona por dentro
+
+### El ciclo completo de memoria
+
+```
+Conversación nueva
+       │
+       ▼
+  Modo Chat ──► Guardas el chat como diario
+       │                    │
+       │                    ▼
+       │           db_consciencias/
+       │           (MD + JSON indexado)
+       │                    │
+       ▼                    ▼
+  Modo Nexo ◄── Seleccionas qué diarios fusionar
+       │
+       ▼
+  Contexto fusionado → Llama 3.1 → Respuesta con memoria
+```
+
+### BM25 con stemming
+
+Cuando escribes una pregunta en el chat, el sistema busca automáticamente en todos los diarios usando BM25 (el algoritmo de Elasticsearch) con SnowballStemmer en español. Esto significa que:
+
+- Buscar `"proyectos"` encuentra diarios con el tag `"proyecto"`
+- Buscar `"conversaciones"` encuentra `"conversacion"`
+- Buscar `"aprendiendo"` encuentra `"aprender"`
+
+El resultado más relevante se inyecta en el prompt antes de que el modelo responda.
+
+### Boot context
+
+Al inicio de cada prompt el sistema inyecta automáticamente:
+- Tu perfil completo (nombre, hardware, nivel técnico, proyectos)
+- Las memorias más relevantes para tu pregunta actual
+- El historial de los últimos 6 turnos de la sesión
+
+Esto hace que la IA sepa quién eres y en qué estás trabajando **desde el primer mensaje**, sin que tengas que explicarlo.
+
+### Resúmenes automáticos de sesión
+
+Cuando cierras una sesión (botón "Guardar sesión" en el dashboard), el propio modelo genera un resumen estructurado:
+
+```
+TEMAS: python, bm25, arquitectura rag
+DECISIONES: usar chunking de 1500 palabras con overlap de 200
+PENDIENTE: implementar pynvml para telemetría VRAM
+USUARIO_INFO: nivel python intermedio, RTX 5060, proyecto nexo
+SINOPSIS: Se discutió la arquitectura de recuperación...
+```
+
+Este resumen se indexa como cualquier otro diario. En futuras sesiones, BM25 puede recuperarlo automáticamente cuando la conversación toque temas relacionados.
+
+---
+
+## Guía de uso del dashboard
+
+### Sidebar (barra lateral)
+
+| Elemento | Función |
+|---|---|
+| `💬 Chat` / `🧬 Nexo` | Cambia entre los dos modos |
+| Checkboxes de diarios | Marca qué contexto incluir en Modo Nexo |
+| `▼ 💬 Chats` | Sección colapsable de chats guardados |
+| `▼ 📄 PDFs` | Sección colapsable de PDFs ingestados |
+| `▼ 🖼️ Imágenes` | Sección colapsable de imágenes analizadas |
+| `✓ All` | Marca o desmarca todos los del grupo de golpe |
+| `💾 Guardar sesión` | Genera resumen y guarda la conversación actual |
+
+### Pestañas principales
+
+**💬 Chat** — Conversación independiente. Sin contexto de otros diarios a menos que BM25 encuentre algo relevante automáticamente. Al terminar, guarda el chat con un nombre y tags.
+
+**🧬 Nexo** — Conversación con el contexto que hayas seleccionado en el sidebar. Cuantos más diarios marques, más contexto tiene el modelo.
+
+**📎 Documentos** — Sube PDFs o imágenes para convertirlos en diarios. Los PDFs se dividen en chunks automáticamente. Las imágenes se describen con Llama 3.2 Vision.
+
+**📂 Diarios** — Gestión completa. Ver, crear manualmente, y explorar todo lo que hay en `db_consciencias/`.
+
+**📋 Sesiones** — Historial de todas las sesiones guardadas con sus resúmenes estructurados.
+
+---
+
+## Uso típico
+
+### Escenario 1: Guardar una conversación de Java para usarla después
+
+1. Abre la pestaña **💬 Chat**
+2. Habla de tus dudas de Java con normalidad
+3. Al terminar, escribe un nombre (`java_herencia`) y tags (`java, universidad`)
+4. Pulsa **Guardar diario**
+5. En futuras sesiones, marca `java_herencia` en el sidebar y abre **🧬 Nexo**
+
+### Escenario 2: Fusionar varios chats en el Nexo
+
+1. Tienes guardados: `java_tareas`, `videojuego_mecanicas`, `parkour_tecnicas`
+2. En el sidebar, marca ☑ `videojuego_mecanicas` y ☑ `parkour_tecnicas`
+3. Abre **🧬 Nexo**
+4. El modelo tiene acceso a ambas conversaciones como si hubiera participado en las dos
+
+### Escenario 3: Ingestar apuntes de clase en PDF
+
+1. Abre **📎 Documentos** → **📄 PDF**
+2. Sube el PDF
+3. Pon nombre (`apuntes_java_tema3`) y tags (`java, universidad, teoria`)
+4. Ajusta el tamaño de chunk si quieres (1500 palabras por defecto)
+5. Pulsa **Procesar e ingestar**
+6. Aparecen `apuntes_java_tema3_p01`, `apuntes_java_tema3_p02`... en la Biblioteca
+7. Marca todos con **✓ All** y úsalos en Modo Nexo
+
+### Escenario 4: Analizar un error con captura de pantalla
+
+1. Abre **📎 Documentos** → **🖼️ Imagen**
+2. Sube la captura del error
+3. En "Instrucción para el modelo" escribe: `¿Qué error muestra esta captura y cómo se soluciona?`
+4. Pulsa **Analizar imagen con IA**
+5. La descripción y solución se guardan como diario para futuras consultas
+
+---
+
+## CLI (modo consola)
+
+Si prefieres usar el Nexo sin interfaz web, puedes usar el CLI directamente:
+
+```powershell
+py -3.11 nexo_consciencia_v6_2.py
+```
+
+Comandos disponibles dentro del CLI:
+
+| Comando | Función |
+|---|---|
+| `:ayuda` | Lista todos los comandos |
+| `:perfil` | Ver tu perfil actual |
+| `:perfil set nombre Alex` | Actualizar un campo del perfil |
+| `:memorias` | Listar todas las memorias guardadas |
+| `:guardar ID` | Guardar texto como nueva memoria |
+| `:buscar TEXTO` | Buscar memorias relevantes con BM25 |
+| `:reparar` | Verificar integridad de la base de datos |
+| `:salir` | Cerrar sesión y generar resumen automático |
+| `:salir-rapido` | Salir sin guardar |
+
+---
+
+## Solución de problemas frecuentes
+
+**`SyntaxError: source code string cannot contain null bytes`**  
+El archivo tiene bytes corruptos por cómo fue copiado. Solución:
+```powershell
+python -c "
+data = open('nexo_dashboard_v7_1.py','rb').read()
+open('nexo_dashboard_v7_1.py','wb').write(data.replace(b'\x00',b''))
+"
+```
+
+**`Ollama no responde`**  
+Abre una terminal y ejecuta `ollama serve`. Déjala abierta mientras usas el Nexo.
+
+**`llama3.2-vision no está instalado`**  
+```powershell
+ollama pull llama3.2-vision
+```
+Pesa aproximadamente 7 GB. Tu modelo `llama3.1` se queda intacto.
+
+**`pymupdf no está instalado`** (PDFs no funcionan)  
+```powershell
+py -3.11 -m pip install pymupdf
+```
+
+**El dashboard no arranca con `streamlit run`**  
+Usa siempre `py -3.11 -m streamlit run` en lugar de `streamlit run` directamente. En Windows, `streamlit` solo funciona como módulo de Python si no está en el PATH.
+
+**Streamlit incompatible** (Python 3.14)  
+Este proyecto requiere **Python 3.11**. Python 3.14 tiene incompatibilidades conocidas con Streamlit. Instala Python 3.11 desde [python.org](https://www.python.org/downloads/release/python-3119/) y úsalo con `py -3.11`.
+
+---
+
+## Stack tecnológico
+
+| Componente | Tecnología | Función |
+|---|---|---|
+| Modelo de chat | Llama 3.1 (via Ollama) | Inferencia principal |
+| Modelo de visión | Llama 3.2 Vision (via Ollama) | Análisis de imágenes |
+| Servidor de modelos | Ollama | Gestión local de LLMs |
+| Interfaz web | Streamlit | Dashboard visual |
+| Búsqueda | BM25Okapi + SnowballStemmer | Recuperación de memorias |
+| Extracción PDF | pymupdf (fitz) | Ingesta de documentos |
+| Telemetría | psutil | Monitorización de hardware |
+| Almacenamiento | Archivos MD + JSON | Base de datos de memorias |
+| Lenguaje | Python 3.11 | Backend completo |
+
+---
+
+## Diferencias con soluciones similares
+
+| | Nexo | NotebookLM | ChatGPT Memory | Mem.ai |
+|---|---|---|---|---|
+| Conocimiento general | ✅ Completo | ❌ Solo tus docs | ✅ | ✅ |
+| Memoria personal | ✅ | ✅ | ✅ Limitada | ✅ |
+| Privacidad total | ✅ 100% local | ❌ Google servers | ❌ OpenAI servers | ❌ Cloud |
+| Coste operativo | ✅ Cero | ❌ Suscripción | ❌ Suscripción | ❌ Suscripción |
+| Control del contexto | ✅ Manual y automático | ❌ Automático | ❌ Automático | ❌ Automático |
+| Funciona sin internet | ✅ | ❌ | ❌ | ❌ |
+
+La diferencia clave con NotebookLM (el competidor más parecido): NotebookLM es RAG puro, sin documentos no sabe nada. Nexo tiene el conocimiento completo de Llama 3.1 más tus memorias personales como contexto adicional.
+
+---
+
+## Roadmap
+
+- [ ] Telemetría VRAM con `pynvml` para GPUs NVIDIA
+- [ ] Importación masiva de chats antiguos desde carpetas
+- [ ] Soporte OCR para PDFs escaneados sin texto seleccionable
+- [ ] API REST para integración con otras herramientas
+- [ ] Instalador automático en un solo clic
+
+---
+
+## Créditos
+
+**Idea y desarrollo:** AlexMedran-exe  
+**Arquitectura de seguridad y backend:** Claude (Anthropic)  
+**Compatibilidad Windows y fix amnesia:** Gemini (Google)  
+**Modelos de IA:** Meta (Llama 3.1 y Llama 3.2 Vision) via Ollama
+
+---
+
+*Proyecto iniciado en clase, desarrollado con curiosidad.*
