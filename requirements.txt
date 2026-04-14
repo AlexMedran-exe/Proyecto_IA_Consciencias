@@ -1,14 +1,14 @@
 # --- Núcleo del Sistema (Backend y Búsqueda) ---
-psutil                # Telemetría de hardware [cite: 58, 192]
+psutil                # Telemetría de hardware 
 requests              # Comunicación con la API de Ollama 
-rank_bm25             # Algoritmo de recuperación de memorias [cite: 58, 192]
-nltk                  # Procesamiento de lenguaje y stemming [cite: 58, 192]
+rank_bm25             # Algoritmo de recuperación de memorias 
+nltk                  # Procesamiento de lenguaje y stemming 
 
 # --- Interfaz y Dashboard ---
-streamlit             # Framework de la interfaz web [cite: 58, 192]
+streamlit             # Framework de la interfaz web 
 
 # --- Ingesta de Documentos y Visión ---
-pymupdf               # Extracción de texto de PDFs (fitz) [cite: 58, 184, 192]
+pymupdf               # Extracción de texto de PDFs (fitz) 
 pillow                # Procesamiento de imágenes para Llama 3.2 Vision
 
 # --- Dictado de Voz (v7.2) ---
@@ -16,4 +16,4 @@ openai-whisper        # Transcripción local mediante GPU
 streamlit-mic-recorder # Componente de grabación para el navegador
 
 # --- Telemetría Avanzada (Roadmap) ---
-pynvml                # Monitorización de VRAM para NVIDIA [cite: 123, 198]
+pynvml                # Monitorización de VRAM para NVIDIA 
