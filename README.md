@@ -10,7 +10,7 @@ El proyecto ha pasado de ser un script dependiente de APIs externas a convertirs
 | **v7.1 (Current)** | **Independencia** | **Salto a Ollama (Llama 3.1/3.2)**.Procesamiento 100% local, visión artificial, búsqueda BM25 y dashboard en Streamlit . |
 
 ### 🚀 Por qué el salto al Procesamiento Local
-**Privacidad Total:** Cero conexiones externas. [cite_start]Tus diarios y documentos nunca salen de tu Acer Nitro.
+**Privacidad Total:** Cero conexiones externas. Tus diarios y documentos nunca salen de tu Acer Nitro.
 **Aprovechamiento de GPU:** Uso intensivo de la **RTX 5060** para inferencia de Llama 3.1 en VRAM .
 **Sin Límites:** Eliminación de cuotas de API y límites de tokens mediante el uso de modelos locales vía Ollama.
 **Multimodalidad Nativa:** Ingesta de PDFs con `pymupdf` y análisis de imágenes con **Llama 3.2 Vision** integrado en el dashboard.
