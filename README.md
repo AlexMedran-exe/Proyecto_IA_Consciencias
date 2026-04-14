@@ -394,6 +394,7 @@ La diferencia clave con NotebookLM (el competidor más parecido): NotebookLM es 
 - [ ] Importación masiva de chats antiguos desde carpetas
 - [ ] Soporte OCR para PDFs escaneados sin texto seleccionable
 - [ ] API REST para integración con otras herramientas
+- [ ] 🎙️ Dictado de Voz: Integración de OpenAI Whisper local para diarios de voz.
 - [ ] Instalador automático en un solo clic
 
 ---
