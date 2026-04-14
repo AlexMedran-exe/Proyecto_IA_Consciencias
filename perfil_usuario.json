@@ -1,0 +1,17 @@
+{
+    "nombre": "Alex",
+    "hardware": "Acer Nitro",
+    "nivel_python": "intermedio",
+    "nivel_otros": {
+        "Java": "básico"
+    },
+    "proyectos_activos": [
+        "nexo_consciencia"
+    ],
+    "temas_frecuentes": [],
+    "preferencias_comunicacion": "respuestas directas y técnicas",
+    "notas_personales": "",
+    "total_sesiones": 5,
+    "ultima_sesion": "2026-04-12 05:00:52.636175",
+    "version_perfil": "6.2"
+}

@@ -1,0 +1,15 @@
+{
+    "id": "Estudiante",
+    "timestamp": "2026-04-12 04:58:27.949189",
+    "tags": [
+        "ia",
+        "java",
+        "estudiante",
+        "dam",
+        "ces lope de vega"
+    ],
+    "resumen": "Soy estudiante de DAM (Desarrollo de aplicaciones multiplataforma) en el instituto CES Lope de Vega, situado en Córdoba, España. Este es un pequeño proyecto hecho por la IA para las IA'S donde yo orqueste este proyecto con Claude y Gemini en Python. Ahora mismo tengo suspensas Lenguaje de Marcas, Programación y Base de Datos.",
+    "checksum": "bb0997a1d9e13c9ecb1babe2200212b0",
+    "version": "6.2",
+    "bytes": 331
+}

@@ -1,0 +1,1 @@
+Soy estudiante de DAM (Desarrollo de aplicaciones multiplataforma) en el instituto CES Lope de Vega, situado en Córdoba, España. Este es un pequeño proyecto hecho por la IA para las IA'S donde yo orqueste este proyecto con Claude y Gemini en Python. Ahora mismo tengo suspensas Lenguaje de Marcas, Programación y Base de Datos.
